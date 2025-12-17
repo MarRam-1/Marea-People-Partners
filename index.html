@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Marea People Partners</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="bg-video">
+      <source src="media/cover-video.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <header class="top-bar">
+      <div class="hero-logo"><img src="media/M.png" alt="" id="logo" /></div>
+
+      <nav class="menu">
+        <ul>
+          <li>Nosotros</li>
+          <li>Servicios</li>
+          <li>Vacantes</li>
+          <li>Contacto</li>
+        </ul>
+      </nav>
+
+      <div class="log-ins">
+        <ul>
+          <li>Login Empleados</li>
+          <li>Login Partners</li>
+        </ul>
+      </div>
+    </header>
+    <div class="headline">
+      <span>
+        Seleccionamos, capacitamos <br />y cuidamos de tu equipo <br />para que
+        tu negocio <strong>CREZCA</strong> <br />sin preocupaciones.</span
+      >
+      <button class="trabaja-button">become a partner</button>
+    </div>
+    <div class="subheadline">Cambiamos la marea, creamos el futuro.</div>
+    <footer>Coded by</footer>
+    <script>
+      const btn = document.querySelector(".trabaja-button");
+
+      btn.addEventListener("mouseenter", () => {
+        btn.textContent = "become a client";
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        btn.textContent = "become a partner";
+      });
+    </script>
+  </body>
+</html>
