@@ -4,41 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>Marea People Partners</title>
   </head>
   <body>
-    <video autoplay muted loop id="bg-video">
-      <source src="media/cover-video.mp4" type="video/mp4" />
-    </video>
-    <div class="overlay"></div>
-    <header class="top-bar">
-      <div class="hero-logo"><img src="media/M.png" alt="" id="logo" /></div>
-
-      <nav class="menu">
-        <ul>
-          <li>Nosotros</li>
-          <li>Servicios</li>
-          <li>Vacantes</li>
-          <li>Contacto</li>
-        </ul>
-      </nav>
-
-      <div class="log-ins">
-        <ul>
-          <li>Login Empleados</li>
-          <li>Login Partners</li>
-        </ul>
-      </div>
-    </header>
-    <div class="headline">
-      <span>
-        Seleccionamos, capacitamos <br />y cuidamos de tu equipo <br />para que
-        tu negocio <strong>CREZCA</strong> <br />sin preocupaciones.</span
+    <div class="container-contact-language">
+      <span class="contact-mainpage">contacto@mareapeoplepartners.com</span>
+      <span class="language"
+        ><span class="material-symbols-outlined"> language_spanish </span></span
       >
-      <button class="trabaja-button">become a partner</button>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </div>
-    <div class="subheadline">Cambiamos la marea, creamos el futuro.</div>
-    <footer>Coded by</footer>
+
+    <div class="hero">
+      <video autoplay muted loop id="bg-video">
+        <source src="media/cover-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="overlay"></div>
+
+      <header class="top-bar">
+        <div class="hero-logo">
+          <img src="media/M.png" alt="MareaLogo1" id="logo" />
+        </div>
+
+        <nav class="menu-container">
+          <div class="menu-card">Nosotros</div>
+          <div class="menu-card">Servicios</div>
+          <div class="menu-card">Vacantes</div>
+          <div class="menu-card">Contacto</div>
+          <div></div>
+          <div class="menu-card">Login</div>
+        </nav>
+      </header>
+
+      <div class="hero-text">
+        <div class="headline">
+          <span>
+            Que tu negocio <strong>CREZCA</strong> <br />sin
+            preocupaciones.</span
+          >
+        </div>
+
+        <div class="subheadline">Cambiamos la marea, creamos el futuro.</div>
+        <button class="trabaja-button">become a partner</button>
+      </div>
+
+      <div class="scroll-down">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+    </div>
+
+    <div class="servicios-container-grid">
+      <div class="servicios">
+        <div class="main-service">
+          <span class="material-symbols-outlined"> how_to_reg </span>
+        </div>
+        <div class="title-services">Reclutamiento y selección de talento</div>
+        <div class="description-service">
+          Identificamos y seleccionamos talento altamente calificado, alineado
+          tanto al perfil técnico como a la cultura de empresas extranjeras que
+          buscan operar en México.
+        </div>
+      </div>
+
+      <div class="servicios">
+        <div class="main-service">
+          <span class="material-symbols-outlined"> cast_for_education </span>
+        </div>
+        <div class="title-services">Gestión laboral, legal y nómina</div>
+        <div class="description-service">
+          Nos encargamos de toda la administración y cumplimiento legal:
+          contratos, nómina, REPSE, IMSS, facturación y demás procesos para que
+          tu operación sea segura y sin fricciones.
+        </div>
+      </div>
+
+      <div class="servicios">
+        <div class="main-service">
+          <span class="material-symbols-outlined"> shield_with_heart </span>
+        </div>
+        <div class="title-services">Onboarding y cultura organizacional</div>
+        <div class="description-service">
+          Acompañamos al talento desde el día uno con capacitación inicial,
+          evaluaciones periódicas y seguimiento continuo, asegurando
+          productividad, retención y una relación sólida entre cliente y equipo.
+        </div>
+      </div>
+    </div>
+    <button class="reserva-button">Agendar consulta</button>
+
+    <div class="nosotras-container">
+      <div class="nosotras-block">
+        <div>
+          <img
+            src="media/pexels-cottonbro-6532337.jpg"
+            alt="nosotras-img"
+            id="nosotras-img"
+          />
+        </div>
+        <div class="nosotras-text">
+          <div class="titulo-nosotras">Acerca de Marea</div>
+          <div class="sobre-nosotras">
+            En
+            <span class="marea-text">Marea People Partners</span> transformamos
+            la manera en que empresas extranjeras y talento mexicano se
+            conectan. <br /><br />
+            Nos enfocamos en construir relaciones laborales sólidas y duraderas,
+            combinando profesionalismo, cercanía y bienestar para quienes forman
+            parte de nuestros equipos. <br /><br />Nuestro compromiso es generar
+            valor real, impulsando tanto el crecimiento de las empresas como el
+            desarrollo del talento que confía en nosotros.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>Coded by Mariana Ramirez</footer>
     <script>
       const btn = document.querySelector(".trabaja-button");
 
@@ -48,6 +135,44 @@
 
       btn.addEventListener("mouseleave", () => {
         btn.textContent = "become a partner";
+      });
+
+      const topBar = document.querySelector(".top-bar");
+
+      window.addEventListener("scroll", () => {
+        if (window.innerWidth > 900) {
+          if (window.scrollY > 50) {
+            topBar.classList.add("scrolled");
+          } else {
+            topBar.classList.remove("scrolled");
+          }
+        }
+      });
+
+      function toggleMenu() {
+        document.querySelector(".menu-container").classList.toggle("open");
+      }
+
+      document.addEventListener("click", (e) => {
+        let menu = document.querySelector(".menu-container");
+        let button = document.querySelector(".menu-btn");
+
+        if (!menu.contains(e.target) && e.target !== button) {
+          menu.classList.remove("open");
+        }
+      });
+
+      window.addEventListener("pageshow", function (event) {
+        let menu = document.querySelector(".menu-container");
+
+        menu.classList.remove("open");
+      });
+
+      let scrollArrow = document.querySelector(".scroll-down");
+
+      scrollArrow.addEventListener("click", () => {
+        let nextSection = document.querySelector(".servicios-container-grid");
+        nextSection.scrollIntoView({ behavior: "smooth" });
       });
     </script>
   </body>
