@@ -1,46 +1,46 @@
 @font-face {
-  font-family: "CursiveBold";
-  src: url("./fonts/Cursive_Bold.otf") format("opentype");
+  font-family: "NeulisBold";
+  src: url("./fonts/Neulis-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "CursiveSemiBold";
-  src: url("./fonts/Cursive_Semi_Bold.otf") format("opentype");
+  font-family: "NeulisBoldItalic";
+  src: url("./fonts/Neulis-BoldItalic.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "NeueBlack";
-  src: url("./fonts/Neue_Black.otf") format("opentype");
+  font-family: "NeulisItalic";
+  src: url("./fonts/Neulis-Italic.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "NeueBold";
-  src: url("./fonts/Neue_Bold.otf") format("opentype");
+  font-family: "AltBlack";
+  src: url("./fonts/NeulisAlt-Black.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "SansBoldItalic";
-  src: url("./fonts/Sans_Bold_Italic.otf") format("opentype");
+  font-family: "AltItalic";
+  src: url("./fonts/NeulisAlt-Italic.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "SansSemiBold";
-  src: url("./fonts/Sans_Semi_Bold.otf") format("opentype");
+  font-family: "AltRegular";
+  src: url("./fonts/NeulisAlt-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -54,7 +54,7 @@
 
 body {
   color: #f6f1ec;
-  font-family: "SansSemiBold", sans-serif;
+  font-family: "AltRegular", sans-serif;
   background-color: #d8b495;
   margin: 0;
   padding: 0;
@@ -85,7 +85,7 @@ body {
 
 .hero {
   position: relative;
-  height: 700px;
+  height: 1000px;
   width: 100%;
   overflow: hidden;
 }
@@ -112,7 +112,7 @@ body {
 
 .top-bar {
   position: fixed;
-  top: 35px;
+  top: 5px;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -127,7 +127,7 @@ body {
 .top-bar.scrolled {
   background-color: rgba(31, 45, 83, 0.5);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  padding: 5px 40px;
+  padding: 25px 40px 0px;
   backdrop-filter: blur(10px);
 }
 
@@ -138,7 +138,7 @@ body {
 }
 
 .top-bar.scrolled .hero-logo img {
-  width: 80px;
+  width: 60px;
 }
 
 .menu-container {
@@ -163,34 +163,36 @@ body {
 
 .headline {
   z-index: 3;
-  font-size: 50px;
+  font-size: 65px;
   line-height: 60px;
 }
 
 .subheadline {
   z-index: 3;
-  font-family: "CursiveSemiBold";
-  font-size: 25px;
+  font-family: "NeulisBoldItalic";
+  font-size: 35px;
 }
 
 .trabaja-button {
-  font-family: "SansSemiBold", sans-serif;
+  font-family: "AltRegular", sans-serif;
   background-color: rgba(31, 45, 83, 0.8);
   border: none;
   color: #f6f1ec;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px;
-  width: 230px;
+  width: 270px;
   vertical-align: middle;
   margin: 20px 0;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .servicios-container-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 50px;
+  padding: 30px 50px;
   text-align: center;
   margin: 50px auto;
   margin-bottom: 0;
@@ -199,35 +201,41 @@ body {
 
 .main-service .material-symbols-outlined {
   font-size: 150px;
-  font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 48;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 350,
+    "GRAD" 0,
+    "opsz" 48;
 }
 
 .title-services {
-  font-size: 23px;
-  font-family: "NeueBold";
+  font-size: 28px;
+  font-family: "NeulisItalic";
 }
 
 .description-service {
-  font-size: 16px;
+  font-size: 20px;
   margin: 10px;
   text-align: justify;
 }
 
 .reserva-button {
   display: block;
-  font-family: "SansSemiBold", sans-serif;
+  font-family: "AltRegular", sans-serif;
   background-color: rgb(31, 45, 83);
   border: none;
   color: #d8b495;
   border-radius: 30px;
-  font-size: 23px;
+  font-size: 20px;
   padding: 15px 20px;
   width: auto;
   text-align: center;
   justify-content: center;
   margin: auto;
   margin-bottom: 50px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .reserva-button:hover {
@@ -243,6 +251,9 @@ body {
   display: flex;
   justify-content: center;
   text-align: left;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .nosotras-block {
@@ -259,7 +270,9 @@ body {
   flex: 0 0 30%;
   max-width: 650px;
   min-width: 300px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 5px;
 }
 
@@ -279,7 +292,116 @@ body {
 }
 
 .marea-text {
-  font-family: "NeueBold";
+  font-family: "NeulisBoldItalic";
+}
+
+.mexico-container {
+  padding: 80px 40px;
+  margin: auto;
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.titulo-mexico {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-titulo {
+  font-size: 35px;
+  font-family: "NeulisItalic";
+}
+
+.mexico-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 2200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#jalisco {
+  flex: 0 0 20%;
+  max-width: 450px;
+  min-width: 100px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+}
+
+.mexico-text {
+  flex: 0 0 80%;
+  max-width: 650px;
+  width: 100%;
+}
+
+.datos-jalisco {
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.datos-jalisco li {
+  padding: 0px 0px 20px;
+}
+
+.diferencia-container {
+  display: block;
+  background-color: #2f2f2f;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 80px 40px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.titulo-diferencia {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.diferencia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.azul {
+  background-color: #1f2d53;
+}
+
+.mocha {
+  background-color: #a57665;
+}
+
+.negro {
+  background-color: #d8b495;
+}
+
+.bloque-diferencia {
+  padding: 25px;
+  font-size: 20px;
+  align-content: center;
+  text-align: center;
+}
+
+.diferencia {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-family: "NeulisItalic";
+}
+
+.cierre-diferencia {
+  margin-top: 30px;
+  font-size: 20px;
 }
 
 footer {
@@ -346,7 +468,6 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-
     margin-bottom: 20px;
   }
 
@@ -362,7 +483,7 @@ footer {
 
   .menu-container {
     position: fixed;
-    top: 31px;
+    top: 15px;
     right: -450px;
     width: 200px;
     height: 100vh;
@@ -412,12 +533,12 @@ footer {
   }
 
   .headline {
-    font-size: 30px;
+    font-size: 35px;
     line-height: 35px;
   }
 
   .subheadline {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .trabaja-button {
@@ -477,5 +598,72 @@ footer {
 
   #nosotras-img {
     width: 30%;
+  }
+
+  .mexico-container {
+    padding: 40px 20px; /* menos padding lateral en pantallas pequeñas */
+  }
+
+  .titulo-mexico {
+    font-size: 35px; /* reducir tamaño de título */
+  }
+
+  .content-titulo {
+    font-size: 22px; /* reducir subtítulo */
+  }
+
+  .mexico-block {
+    flex-direction: column; /* apilar imagen y texto verticalmente */
+    gap: 20px;
+    align-items: center;
+  }
+
+  #jalisco {
+    flex: 0 1 50%; /* la imagen se encoge primero */
+    max-width: 300px; /* limitar ancho máximo */
+    min-width: 100px; /* evitar que desaparezca */
+    width: 100%;
+    height: auto;
+  }
+
+  .mexico-text {
+    flex: 1 1 100%; /* el texto ocupa todo el ancho disponible */
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px; /* un poco de padding lateral */
+  }
+
+  .datos-jalisco {
+    font-size: 16px; /* ajustar tamaño de texto para móviles */
+    margin-top: 15px;
+    padding: 0 10px; /* padding interno menor */
+  }
+
+  .diferencia-container {
+    padding: 40px 20px; /* menos padding lateral */
+  }
+
+  .titulo-diferencia {
+    font-size: 30px; /* reducir tamaño de título */
+    margin-bottom: 20px;
+  }
+
+  .diferencia-grid {
+    grid-template-columns: 1fr; /* una columna en móviles */
+    gap: 20px; /* espacio entre bloques */
+  }
+
+  .bloque-diferencia {
+    padding: 15px; /* menos padding interno */
+    font-size: 16px; /* texto más pequeño */
+  }
+
+  .diferencia {
+    font-size: 20px; /* título del bloque más pequeño */
+  }
+
+  .cierre-diferencia {
+    font-size: 16px; /* ajustar texto final */
+    margin-top: 20px;
   }
 }
