@@ -151,6 +151,11 @@ body {
   font-size: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: #f6f1ec;
+}
+
 .hero-text {
   position: absolute;
   bottom: 110px;
@@ -195,7 +200,6 @@ body {
   padding: 30px 50px;
   text-align: center;
   margin: 50px auto;
-  margin-bottom: 0;
   gap: 30px;
 }
 
@@ -217,31 +221,6 @@ body {
   font-size: 20px;
   margin: 10px;
   text-align: justify;
-}
-
-.reserva-button {
-  display: block;
-  font-family: "AltRegular", sans-serif;
-  background-color: rgb(31, 45, 83);
-  border: none;
-  color: #d8b495;
-  border-radius: 30px;
-  font-size: 20px;
-  padding: 15px 20px;
-  width: auto;
-  text-align: center;
-  justify-content: center;
-  margin: auto;
-  margin-bottom: 50px;
-  box-shadow:
-    rgba(0, 0, 0, 0.16) 0px 3px 6px,
-    rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.reserva-button:hover {
-  background-color: #a57665;
-  color: #f6f1ec;
-  transition: all 0.3s ease-in-out;
 }
 
 .nosotras-container {
@@ -372,6 +351,7 @@ body {
 .diferencia-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  border-radius: 5px;
 }
 
 .azul {
@@ -402,6 +382,30 @@ body {
 .cierre-diferencia {
   margin-top: 30px;
   font-size: 20px;
+}
+
+.reserva-button {
+  display: block;
+  font-family: "AltRegular", sans-serif;
+  background-color: rgb(31, 45, 83);
+  border: none;
+  color: #d8b495;
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 15px 20px;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  margin: 50px auto 0px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.reserva-button:hover {
+  background-color: #a57665;
+  color: #f6f1ec;
+  transition: all 0.3s ease-in-out;
 }
 
 footer {
@@ -656,6 +660,7 @@ footer {
   .bloque-diferencia {
     padding: 15px; /* menos padding interno */
     font-size: 16px; /* texto más pequeño */
+    border-radius: 5px;
   }
 
   .diferencia {
@@ -665,5 +670,8 @@ footer {
   .cierre-diferencia {
     font-size: 16px; /* ajustar texto final */
     margin-top: 20px;
+  }
+  .reserva-button {
+    font-size: 25px;
   }
 }
