@@ -36,6 +36,7 @@ body {
 }
 
 .trabaja-button2 {
+  display: flex;
   background-color: #f6f1ec;
   border: none;
   color: #a57665;
@@ -45,7 +46,9 @@ body {
   padding: 10px;
   width: 270px;
   vertical-align: middle;
-  margin: 50px;
+  margin: 50px auto;
+  text-align: center;
+  justify-content: center;
 }
 
 #problema-img {
