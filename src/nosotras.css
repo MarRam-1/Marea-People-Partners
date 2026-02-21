@@ -1,0 +1,269 @@
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  background-color: transparent;
+  background: linear-gradient(
+    to top,
+    rgba(216, 180, 149, 0.8),
+    rgba(31, 45, 83, 0.8)
+  ) !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 20px;
+}
+
+.espacio {
+  display: block;
+  height: 200px;
+}
+
+.hero-nosotras {
+  margin: 40px 80px;
+  padding: 20px auto;
+  text-align: center;
+}
+
+.titulo-nosotras-pagina {
+  font-family: "NeulisBoldItalic";
+  font-size: 60px;
+  margin: 10px auto 20px;
+}
+
+.contenido-estrategia {
+  margin: 60px auto;
+  font-size: 25px;
+}
+
+.nosotras-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 100px 80px;
+}
+
+.bloque-nosotras {
+  border-radius: 5px;
+  padding: 30px 20px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.titulo-bloque {
+  text-align: center;
+  font-size: 25px;
+  font-family: "AltBlack";
+  margin-bottom: 15px;
+}
+
+.contenido-bloque {
+  text-align: justify;
+}
+
+.detras-de-contenedor {
+  margin: 40px 80px;
+}
+
+.titulo-detrasde {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+
+.grid-detrasde {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.bloque-detras {
+  text-align: justify;
+}
+
+.blackbold {
+  color: #1f2d53;
+}
+
+#founders {
+  width: 95%;
+  max-width: 450px;
+  min-width: 100px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empresa-contenedor {
+  margin: 120px 80px 80px;
+  text-align: center;
+}
+
+.titulo-empresa {
+  font-family: "NeulisBoldItalic";
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+.contenido-empresa {
+  font-size: 22px;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.valor {
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  text-align: center;
+}
+
+.titulo-valor {
+  font-family: "AltBlack";
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.desc-valor {
+  font-size: 18px;
+}
+
+.cta-empresa {
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  /* Espacio inicial para top-bar */
+  .espacio {
+    height: 20px;
+  }
+
+  /* Hero */
+  .hero-nosotras {
+    margin: 0 15px 95px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .titulo-nosotras-pagina {
+    font-size: 35px;
+    line-height: 40px;
+    margin: 10px auto 15px;
+  }
+
+  .contenido-estrategia {
+    font-size: 18px;
+    margin: 30px auto;
+  }
+
+  /* Nosotras grid */
+  .nosotras-grid {
+    grid-template-columns: 1fr;
+    margin: 50px 15px;
+    gap: 20px;
+  }
+
+  .bloque-nosotras {
+    padding: 20px 15px;
+    font-size: 16px;
+  }
+
+  .titulo-bloque {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contenido-bloque {
+    font-size: 16px;
+  }
+
+  /* Detrás de Marea */
+  .detras-de-contenedor {
+    margin: 30px 15px;
+  }
+
+  .titulo-detrasde {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .grid-detrasde {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bloque-detras {
+    font-size: 16px;
+  }
+
+  #founders {
+    width: 80%;
+    max-width: 350px;
+    min-width: 150px;
+    margin: 0 auto;
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  /* Ajuste general de textos y padding */
+  .marea-text.blackbold {
+    font-size: 16px;
+  }
+
+  .empresa-contenedor {
+    margin: 40px 20px;
+  }
+
+  .titulo-empresa {
+    font-size: 30px;
+  }
+
+  .contenido-empresa {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .valores-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .titulo-valor {
+    font-size: 20px;
+  }
+
+  .desc-valor {
+    font-size: 16px;
+  }
+
+  .cta-empresa .reserva-button {
+    font-size: 25px;
+    padding: 12px 15px;
+  }
+
+  .scroll-down {
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    cursor: pointer;
+  }
+}

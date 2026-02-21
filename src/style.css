@@ -55,9 +55,22 @@
 body {
   color: #f6f1ec;
   font-family: "AltRegular", sans-serif;
+  font-size: 20px;
   background-color: #d8b495;
   margin: 0;
   padding: 0;
+}
+
+.blackbold {
+  color: #1f2d53;
+}
+
+.mochabold {
+  color: #a57665;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .container-contact-language {
@@ -192,6 +205,7 @@ a {
   box-shadow:
     rgba(0, 0, 0, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  text-align: center;
 }
 
 .servicios-container-grid {
@@ -201,6 +215,22 @@ a {
   text-align: center;
   margin: 50px auto;
   gap: 30px;
+}
+
+.servicios {
+  background-color: rgba(31, 45, 83, 0.95);
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.servicios:hover {
+  transform: scale(1.09);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 12px;
 }
 
 .main-service .material-symbols-outlined {
@@ -221,6 +251,28 @@ a {
   font-size: 20px;
   margin: 10px;
   text-align: justify;
+}
+
+.description-service li {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 15px 10px;
+  text-align: left;
+}
+
+.cta-servicio {
+  display: inline-block;
+  background-color: #a57665;
+  color: #1f2d53;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.cta-servicio:hover {
+  background-color: #d8b495;
+  color: #1f2d53;
 }
 
 .nosotras-container {
@@ -246,7 +298,7 @@ a {
 }
 
 #nosotras-img {
-  flex: 0 0 30%;
+  flex: 0 0 50%;
   max-width: 650px;
   min-width: 300px;
   box-shadow:
@@ -256,11 +308,12 @@ a {
 }
 
 .nosotras-text {
-  flex: 0 0 70%;
-  max-width: 500px;
+  flex: 0 0 50%;
+  max-width: 600px;
 }
 .titulo-nosotras {
   font-size: 50px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -275,9 +328,9 @@ a {
 }
 
 .mexico-container {
-  padding: 80px 40px;
-  margin: auto;
   display: block;
+  padding: 80px 20px;
+  margin: auto;
   justify-content: center;
   text-align: center;
 }
@@ -299,14 +352,12 @@ a {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  max-width: 2200px;
   width: 100%;
-  margin: 0 auto;
 }
 
 #jalisco {
-  flex: 0 0 20%;
-  max-width: 450px;
+  flex: 0 0 50%;
+  max-width: 550px;
   min-width: 100px;
   box-shadow:
     rgba(0, 0, 0, 0.16) 0px 3px 6px,
@@ -315,20 +366,25 @@ a {
 }
 
 .mexico-text {
-  flex: 0 0 80%;
-  max-width: 650px;
+  flex: 0 0 50%;
   width: 100%;
+  text-align: justify;
 }
 
 .datos-jalisco {
-  font-size: 20px;
   text-align: justify;
   margin-top: 20px;
   padding: 0 20px;
 }
 
-.datos-jalisco li {
-  padding: 0px 0px 20px;
+.dato {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0px 10px;
+}
+
+.datos-jalisco ul {
+  margin: 0;
 }
 
 .diferencia-container {
@@ -351,7 +407,7 @@ a {
 .diferencia-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-radius: 5px;
+  gap: 15px;
 }
 
 .azul {
@@ -367,16 +423,25 @@ a {
 }
 
 .bloque-diferencia {
+  border-radius: 5px;
   padding: 25px;
   font-size: 20px;
   align-content: center;
   text-align: center;
+  vertical-align: middle;
 }
 
 .diferencia {
   margin-bottom: 10px;
-  font-size: 25px;
-  font-family: "NeulisItalic";
+  font-size: 30px;
+  font-weight: bold;
+}
+.diferencia-contenido {
+  text-align: justify;
+}
+
+.diferencia-contenido .material-symbols-outlined {
+  vertical-align: middle;
 }
 
 .cierre-diferencia {
@@ -387,9 +452,9 @@ a {
 .reserva-button {
   display: block;
   font-family: "AltRegular", sans-serif;
-  background-color: rgb(31, 45, 83);
+  background-color: #f6f1ec;
   border: none;
-  color: #d8b495;
+  color: #a57665;
   border-radius: 30px;
   font-size: 30px;
   padding: 15px 20px;
@@ -405,6 +470,29 @@ a {
 .reserva-button:hover {
   background-color: #a57665;
   color: #f6f1ec;
+  transition: all 0.3s ease-in-out;
+}
+
+.reserva-button2 {
+  display: block;
+  font-family: "AltRegular", sans-serif;
+  background-color: #f6f1ec;
+  border: none;
+  color: #2f2f2f;
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 15px 20px;
+  width: 70%;
+  text-align: center;
+  justify-content: center;
+  margin: 50px auto 0px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.reserva-button2:hover {
+  transform: scale(1.2);
   transition: all 0.3s ease-in-out;
 }
 
@@ -596,6 +684,14 @@ footer {
     font-size: 100px;
   }
 
+  .nosotras-container {
+    padding: 15px;
+  }
+
+  .imagen-nosotras {
+    text-align: center;
+  }
+
   .nosotras-block {
     flex-direction: column;
   }
@@ -634,13 +730,13 @@ footer {
     flex: 1 1 100%; /* el texto ocupa todo el ancho disponible */
     max-width: 100%;
     width: 100%;
-    padding: 0 15px; /* un poco de padding lateral */
+    padding: 0;
   }
 
   .datos-jalisco {
     font-size: 16px; /* ajustar tamaño de texto para móviles */
     margin-top: 15px;
-    padding: 0 10px; /* padding interno menor */
+    padding: 0;
   }
 
   .diferencia-container {
@@ -673,5 +769,9 @@ footer {
   }
   .reserva-button {
     font-size: 25px;
+  }
+  .reserva-button2 {
+    font-size: 20px;
+    width: 100%;
   }
 }
