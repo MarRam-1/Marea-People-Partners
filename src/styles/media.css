@@ -148,9 +148,21 @@
   .diferencia { font-size: 22px; }
   .cierre-diferencia { font-size: 17px; margin-top: 20px; }
 
-  /* --- Nosotras page --- */
-  /* espacio clears both fixed bars: contact-bar (~32px) + top-bar with logo (~50px) */
+  /* --- Nosotras / Servicios pages ---
+     On these pages the top-bar flows in the document (pushes content down)
+     so the logo doesn't sit on top of page text.
+     Home has no data-theme so the absolute/overlay behaviour stays there. */
+  body[data-theme="nosotras"] .top-bar,
+  body[data-theme="servicios"] .top-bar {
+    position: relative;
+    top: auto;
+    margin-top: 32px;
+  }
+
+  /* espacio only needs to clear the small gap after the in-flow top-bar */
   .espacio { height: 85px; }
+  body[data-theme="nosotras"] .espacio,
+  body[data-theme="servicios"] .espacio { height: 10px; }
 
   .hero-nosotras { margin: 10px 15px 40px; padding: 15px; }
   .titulo-nosotras-pagina { font-size: 38px; line-height: 42px; }
