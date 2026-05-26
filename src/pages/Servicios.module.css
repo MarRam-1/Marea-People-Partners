@@ -1,0 +1,239 @@
+.espacio {
+  display: block;
+  height: 200px;
+}
+
+.contenedorGeneral {
+  margin: 0 80px;
+}
+
+.headline {
+  font-size: 65px;
+  line-height: 60px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.subheadline {
+  font-family: "NeulisBoldItalic";
+  text-align: center;
+  font-size: 20px;
+  margin: 50px auto;
+}
+
+.trabajaButton {
+  display: flex;
+  background-color: #f6f1ec;
+  border: none;
+  color: #a57665;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 25px;
+  padding: 10px;
+  width: 270px;
+  vertical-align: middle;
+  margin: 50px auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.scrollDown {
+  display: none;
+}
+
+.problemaContenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 1800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2f2f2f;
+  border-radius: 5px;
+}
+
+.bloqueProblema {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+
+.textoProblema {
+  text-align: justify;
+  padding: 15px;
+  width: 100%;
+}
+
+.textoProblema .material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.problemaImg {
+  width: 90%;
+  max-width: 550px;
+  min-width: 100px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+}
+
+.fasesContenedor {
+  margin-top: 40px;
+}
+
+.tituloGeneralFase {
+  text-align: center;
+  font-size: 50px;
+  margin: 80px auto 30px;
+  color: #f6f1ec;
+}
+
+.faseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.fase {
+  background-color: #f6f1ec;
+  color: #a57665;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: justify;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fase:hover {
+  transform: scale(1.05);
+}
+
+.tituloFase {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contenedorFase ul {
+  padding: 0 20px;
+  list-style: none;
+}
+
+.contenedorFase .material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.reservaButton {
+  display: block;
+  font-family: "AltRegular", sans-serif;
+  background-color: #2f2f2f;
+  color: #f6f1ec;
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 15px 20px;
+  width: auto;
+  text-align: center;
+  margin: 50px auto 30px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.reservaButton:hover {
+  background-color: #f6f1ec;
+  color: #2f2f2f;
+  transition: all 0.3s ease-in-out;
+}
+
+.contactoFormulario {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 50px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .espacio {
+    height: 20px;
+  }
+
+  .contenedorGeneral {
+    margin: 0 20px;
+  }
+
+  .headline {
+    font-size: 28px;
+    line-height: normal;
+    margin: 30px auto;
+  }
+
+  .subheadline {
+    font-size: 20px;
+    margin: 30px auto;
+  }
+
+  .trabajaButton {
+    font-size: 18px;
+    margin: 20px auto;
+  }
+
+  .scrollDown {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .scrollDown .material-symbols-outlined {
+    font-size: 80px;
+    color: #f6f1ec;
+    animation: bounce 1.8s infinite;
+    opacity: 0.9;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(10px); }
+    60% { transform: translateY(6px); }
+  }
+
+  .problemaContenedor {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+    margin-top: 100px;
+  }
+
+  .problemaImg {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .faseGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .tituloGeneralFase {
+    font-size: 35px;
+    margin: 50px auto 20px;
+  }
+
+  .tituloFase {
+    font-size: 22px;
+  }
+
+  .reservaButton {
+    font-size: 20px;
+    padding: 10px 15px;
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,433 @@
+/* Hero */
+.hero {
+  position: relative;
+  height: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(216, 180, 149, 0.8),
+    rgba(31, 45, 83, 0.8)
+  );
+  z-index: 1;
+}
+
+.heroText {
+  position: absolute;
+  bottom: 110px;
+  left: 60px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.headline {
+  z-index: 3;
+  font-size: 65px;
+  line-height: 60px;
+}
+
+.subheadline {
+  z-index: 3;
+  font-family: "NeulisBoldItalic";
+  font-size: 35px;
+}
+
+.scrollDown {
+  display: none;
+}
+
+/* Services Grid */
+.serviciosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px 50px;
+  text-align: center;
+  margin: 50px auto;
+  gap: 30px;
+}
+
+.servicio {
+  background-color: rgba(31, 45, 83, 0.95);
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.servicio:hover {
+  transform: scale(1.09);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 12px;
+}
+
+.mainService .material-symbols-outlined {
+  font-size: 150px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 350,
+    "GRAD" 0,
+    "opsz" 48;
+}
+
+.titleServices {
+  font-size: 28px;
+  font-family: "NeulisItalic";
+}
+
+.descriptionService {
+  font-size: 20px;
+  margin: 10px;
+  text-align: justify;
+}
+
+.descriptionService li {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 15px 10px;
+  text-align: left;
+}
+
+/* About Section */
+.nosotrasContainer {
+  background-color: #a57665;
+  padding: 80px 40px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.nosotrasBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.imagenNosotras {
+  flex: 0 0 50%;
+}
+
+.nosotrasImg {
+  max-width: 650px;
+  min-width: 300px;
+  width: 100%;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+}
+
+.nosotrasText {
+  flex: 0 0 50%;
+  max-width: 600px;
+}
+
+.tituloNosotras {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sobreNosotras {
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.pilaresNosotras li {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+
+/* Mexico Section */
+.mexicoContainer {
+  display: block;
+  padding: 80px 20px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.tituloMexico {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.jalisco {
+  font-size: 50px;
+}
+
+.contentTitulo {
+  font-size: 35px;
+  font-family: "NeulisItalic";
+}
+
+.mexicoBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.jaliscoBig {
+  flex: 0 0 50%;
+  max-width: 550px;
+  min-width: 100px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+}
+
+.mexicoText {
+  flex: 0 0 50%;
+  width: 100%;
+  text-align: justify;
+}
+
+.datosJalisco {
+  text-align: justify;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.dato {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+}
+
+.datosJalisco ul {
+  margin: 0;
+}
+
+/* Strategic Advantage */
+.diferenciaContainer {
+  display: block;
+  background-color: #2f2f2f;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 80px 40px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.tituloDiferencia {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.diferenciaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.bloqueDiferencia {
+  border-radius: 5px;
+  padding: 25px;
+  font-size: 20px;
+  align-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.diferencia {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.diferenciaContenido {
+  text-align: justify;
+}
+
+.diferenciaContenido .material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.cierreDiferencia {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .hero {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-top: 40px;
+  }
+
+  .heroText {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .headline {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .subheadline {
+    font-size: 20px;
+  }
+
+  .scrollDown {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    cursor: pointer;
+  }
+
+  .scrollDown .material-symbols-outlined {
+    font-size: 80px;
+  }
+
+  .scrollDown span {
+    color: #f6f1ec;
+    animation: bounce 1.8s infinite;
+    opacity: 0.9;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(10px); }
+    60% { transform: translateY(6px); }
+  }
+
+  .serviciosGrid {
+    grid-template-columns: 1fr;
+    margin-top: 5px;
+    padding: 15px;
+  }
+
+  .mainService .material-symbols-outlined {
+    font-size: 100px;
+  }
+
+  .nosotrasContainer {
+    padding: 15px;
+  }
+
+  .nosotrasBlock {
+    flex-direction: column;
+  }
+
+  .imagenNosotras {
+    text-align: center;
+  }
+
+  .nosotrasImg {
+    width: 30%;
+    min-width: 120px;
+  }
+
+  .mexicoContainer {
+    padding: 40px 20px;
+  }
+
+  .tituloMexico {
+    font-size: 35px;
+  }
+
+  .contentTitulo {
+    font-size: 22px;
+  }
+
+  .mexicoBlock {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .jaliscoBig {
+    max-width: 300px;
+    min-width: 100px;
+    width: 100%;
+  }
+
+  .mexicoText {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .datosJalisco {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .diferenciaContainer {
+    padding: 40px 20px;
+  }
+
+  .tituloDiferencia {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .diferenciaGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bloqueDiferencia {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .diferencia {
+    font-size: 20px;
+  }
+
+  .cierreDiferencia {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}

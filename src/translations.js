@@ -1,0 +1,422 @@
+const translations = {
+  es: {
+    nav: {
+      inicio: 'Inicio',
+      nosotras: 'Nosotras',
+      servicios: 'Servicios',
+      login: 'Login',
+    },
+    home: {
+      heroPrefix: 'Que tu negocio',
+      heroStrong: 'CREZCA',
+      heroSuffix: 'sin preocupaciones.',
+      heroSub: 'Cambiamos la marea, creamos el futuro.',
+      heroBtn: 'crece con nosotras',
+      heroBtnHover: 'become a client',
+
+      s1Title: 'Reclutamiento y selección de talento',
+      s1i1: 'Talento alineado con la cultura de tu empresa',
+      s1i2: 'Reducción de tiempos de contratación',
+      s1i3: 'Onboarding que facilita integración y compromiso desde el día uno',
+      s2Title: 'Gestión laboral, legal y nómina',
+      s2i1: 'Contratos y nómina sin complicaciones',
+      s2i2: 'Cumplimiento total con IMSS y LFDT',
+      s2i3: 'Seguridad para operar en México con tranquilidad',
+      s3Title: 'Onboarding y cultura organizacional',
+      s3i1: 'Integración rápida y efectiva del talento',
+      s3i2: 'Seguimiento continuo que mejora productividad',
+      s3i3: 'Fortalecimiento de relaciones entre equipo y cliente',
+      learnMore: 'Saber más',
+
+      aboutTitle: 'Acerca de Marea',
+      aboutPrep: 'En',
+      aboutText1:
+        'conectamos empresas extranjeras y nacionales con el talento mexicano, creando relaciones laborales sólidas y duraderas que impulsan el crecimiento de tu negocio.',
+      aboutPillarsTitle: 'Nuestros pilares:',
+      pillar1Strong: 'Profesionalismo:',
+      pillar1: 'Procesos claros y eficientes para tu empresa.',
+      pillar2Strong: 'Cercanía:',
+      pillar2: 'Atención personalizada para cada cliente y empleado.',
+      pillar3Strong: 'Bienestar:',
+      pillar3: 'Talento motivado y equipos comprometidos.',
+      aboutText2:
+        'Nos comprometemos a generar valor real, impulsando tanto el desarrollo de tus equipos como la expansión de tu empresa, sin complicaciones ni sorpresas.',
+      aboutBtn: 'Agendar consulta',
+
+      mexicoTitle: 'Expande tu operación en México',
+      mexicoSub: 'Una ubicación con talento, estructura y proyección.',
+      d1Title: 'Fuerza laboral sólida',
+      d1Strong: '+4 millones de personas',
+      d1Text: 'conforman la población económicamente activa en Jalisco.',
+      d1Benefit:
+        'Esto significa acceso amplio a talento calificado para expandir tu operación sin limitar tu crecimiento.',
+      d2Title: 'Empleo Formal estructurado',
+      d2Prefix: 'Más de',
+      d2Strong: '2 millones de trabajadores afiliados al IMSS.',
+      d2Benefit:
+        'Operaciones respaldadas por un sistema formal que brinda seguridad jurídica y estabilidad laboral.',
+      d3Title: 'Economía diversificada',
+      d3Intro: 'Presencia fuerte en:',
+      d3List: ['Servicios', 'Comercio', 'Industria manufacturera', 'Agroindustria', 'Logística', 'Tecnología'],
+      d3Benefit:
+        'Una estructura económica variada reduce riesgos y permite escalar con mayor estabilidad.',
+      d4Title: 'Polo Empresarial estratégico',
+      d4Text: 'La zona Metropolitana de Guadalajara concentra más del',
+      d4Strong: '60% de la actividad económica del estado',
+      d4Benefit:
+        'Infraestructura, conectividad y ecosistema empresarial listo para recibir inversión extranjera.',
+      mexicoPrep: 'En',
+      mexicoClose1:
+        'Marea aprovechamos estas ventajas para que tu empresa opere en Jalisco con estructura legal, talento alineado y un modelo escalable desde el inicio.',
+      mexicoClose2: 'Te ayudamos a establecerte con seguridad y visión de crecimiento.',
+
+      ventajaTitle: 'Ventaja estratégica',
+      b1Title: 'Operación segura y sin fricción',
+      b1Items: [
+        'Cumplimiento legal completo.',
+        'Estructura clara desde el inicio.',
+        'Modelo EOR o consultoría según tu necesidad.',
+        'Acompañamiento continuo.',
+      ],
+      b1Close: 'Puedes expandirte en México sin incertidumbre.',
+      b2Title: 'Talento alineado a tu cultura',
+      b2Items: [
+        'Reclutamiento estratégico.',
+        'Onboarding estructurado.',
+        'Seguimiento y evaluación continua.',
+        'Enfoque en retención y estabilidad.',
+      ],
+      b2Close: 'Equipos comprometidos, no solo contrataciones rápidas.',
+      b3Title: 'Crecimiento escalable',
+      b3Items: [
+        'Procesos diseñados para crecer contigo.',
+        'Flexibilidad para adaptar estructura.',
+        'Visión a mediano y largo plazo.',
+        'Conexión con ecosistema empresarial local.',
+      ],
+      b3Close: 'No solo operas, construyes una base sólida para expandirte.',
+      cierre1: 'No somos solo un proveedor.',
+      cierre2:
+        'Somos tu socio estratégico para establecer, estructurar y escalar tu operación en México con seguridad, claridad y enfoque humano.',
+      diagBtn: 'Agenda tu diagnóstico inicial',
+    },
+
+    nosotras: {
+      heroTitle: 'Estructura, talento y crecimiento sin fricción.',
+      heroPrep: 'En',
+      heroText1:
+        'diseñamos estructuras de talento sólidas para empresas que quieren crecer en México con claridad, cumplimiento y visión de largo plazo.',
+      heroText2: 'Nos integramos a tu estructura como un socio de crecimiento.',
+
+      b1Title: 'Estructura con propósito humano',
+      b1Intro: 'Diseñamos estructuras que aseguran:',
+      b1Items: ['Resultados medibles', 'Experiencia laboral positiva', 'Relaciones laborales duraderas'],
+      b1Close:
+        'Creemos que el crecimiento empresarial solo es sostenible cuando también lo es la experiencia humana.',
+      b2Title: 'Nuestro enfoque',
+      b2Intro: 'Diseñamos un sistema integral que conecta:',
+      b2Items: [
+        'Reclutamiento estratégico',
+        'Onboarding estructurado',
+        'Gestión administrativa',
+        'Seguimiento de desempeño',
+        'Estrategias de retención',
+      ],
+      b2Close1: 'No cubrimos vacantes.',
+      b2Close2: 'Construimos equipos que permanecen.',
+      b3Title: 'Inteligencia y mejora continua',
+      b3t1: 'Tomamos decisiones con información real.',
+      b3t2: 'Medimos experiencia, detectamos fricciones y generamos reportes accionables para anticipar riesgos.',
+      b3t3: 'La mejora continua no es discurso.',
+      b3t4: 'Es parte de nuestro modelo.',
+
+      detrasTitle: 'Detrás de Marea',
+      detrasConnector: ', socias fundadoras, unimos más de 16 años de experiencia en gestión de talento y recursos humanos en empresas nacionales e internacionales.',
+      d2Pre: 'Daniela es psicóloga con Maestría en Dirección de Capital Humano, certificaciones SHRM-CP y Senior Recruiter, y se distingue por su',
+      d2Highlight: 'enfoque humano, estructurado y orientado a resultados',
+      d2Post: ', liderando procesos de reclutamiento, gestión de proyectos y experiencia del candidato.',
+      d3Pre: 'Mariana es psicóloga con certificación en Comunicación Interna y Employee Experience, y aporta una',
+      d3Highlight: 'visión integral entre personas, procesos y negocio',
+      d3Post: ', enfocada en impacto, mejora continua y cumplimiento organizacional.',
+      d4Pre: 'Después de años viendo empresas sin estructura clara y equipos mal integrados, decidimos crear',
+      d4Post:
+        'para ofrecer soluciones que no solo cumplen con los estándares legales y operativos, sino que también generan valor real para empresas y talento, con profesionalismo, cercanía y confianza.',
+
+      empresaTitle: 'La empresa que somos',
+      empresaText:
+        'tiene una visión clara, trabajamos de forma profesional, confiable y centrada en las personas; construyendo estructuras de talento que generen valor real, cumplan con la ley y promuevan relaciones laborales sólidas.',
+
+      v1Title: 'Transparencia',
+      v1Desc: 'Comunicación honesta y procesos visibles para clientes y colaboradores.',
+      v2Title: 'Enfoque humano',
+      v2Desc: 'Ponemos al talento y al cliente en el centro, creando relaciones sanas y empáticas.',
+      v3Title: 'Eficiencia',
+      v3Desc: 'Procesos claros, resultados rápidos y confiables, sin sacrificar calidad.',
+      v4Title: 'Innovación con propósito',
+      v4Desc: 'Mejoramos procesos y experiencias, siempre con sentido y estrategia.',
+      v5Title: 'Colaboración',
+      v5Desc: 'Construimos relaciones de confianza con clientes, talento y aliados.',
+      ctaBtn: 'Agendar consulta',
+    },
+
+    servicios: {
+      headline: 'Servicios diseñados para operar y crecer en México con estructura y seguridad.',
+      subheadline:
+        'Desde la contratación hasta el seguimiento continuo, gestionamos el talento para que tú te concentres en hacer crecer tu negocio.',
+      heroBtn: 'crece con nosotras',
+      heroBtnHover: 'become a client',
+
+      probIntro: 'Expandirse o estructurar operación en México puede implicar:',
+      probItems: [
+        'Riesgos legales',
+        'Errores en contratación',
+        'Rotación alta',
+        'Procesos administrativos complejos',
+        'Desalineación cultural',
+      ],
+      probClose:
+        'En Marea estructuramos todo el proceso para que operes con tranquilidad desde el día uno.',
+
+      fasesPrep: 'te ofrece:',
+      f1Title: 'Análisis profundo',
+      f1Items: [
+        'Mapa de riesgos legales y operativos',
+        'Identificación de oportunidades de optimización',
+        'Ruta clara de implementación de talento y estructura',
+        'Recomendaciones inmediatas para eficiencia y crecimiento',
+      ],
+      f2Title: 'Reclutamiento especializado',
+      f2Items: ['Talento técnico alineado a cultura', 'Filtros estratégicos', 'Reducción de error de contratación'],
+      f2Close: 'No buscamos candidatos. Buscamos estabilidad para tu operación.',
+      f3Title: 'Estructura Administrativa',
+      f3Items: ['Modelo EOR', 'Gestión integral', 'Consultoría especializada', 'Soporte puntual'],
+      f3Close: 'Operas en México sin asumir la complejidad legal.',
+      f4Title: 'Integración y Retención',
+      f4Items: [
+        'Capacitación inicial',
+        'Adaptación al cliente',
+        'Procesos claros',
+        'Evaluaciones periódicas',
+        'Seguimiento estratégico',
+        'Cultura organizacional (modelo híbrido y presencial)',
+      ],
+      f4Close: 'Nos aseguramos de que funcione.',
+      ctaBtn: 'Agenda tu diagnóstico inicial',
+    },
+  },
+
+  en: {
+    nav: {
+      inicio: 'Home',
+      nosotras: 'About Us',
+      servicios: 'Services',
+      login: 'Login',
+    },
+    home: {
+      heroPrefix: 'Let your business',
+      heroStrong: 'GROW',
+      heroSuffix: 'without worries.',
+      heroSub: 'We change the tide, we shape the future.',
+      heroBtn: 'grow with us',
+      heroBtnHover: 'become a client',
+
+      s1Title: 'Talent Recruitment & Selection',
+      s1i1: 'Talent aligned with your company culture',
+      s1i2: 'Reduced hiring timelines',
+      s1i3: 'Onboarding that fosters integration and commitment from day one',
+      s2Title: 'Labor, Legal & Payroll Management',
+      s2i1: 'Contracts and payroll without complications',
+      s2i2: 'Full compliance with IMSS and LFDT',
+      s2i3: 'Security to operate in Mexico with peace of mind',
+      s3Title: 'Onboarding & Organizational Culture',
+      s3i1: 'Fast and effective talent integration',
+      s3i2: 'Ongoing follow-up that improves productivity',
+      s3i3: 'Strengthening relationships between team and client',
+      learnMore: 'Learn more',
+
+      aboutTitle: 'About Marea',
+      aboutPrep: 'At',
+      aboutText1:
+        'we connect foreign and national companies with Mexican talent, building solid and lasting work relationships that drive your business growth.',
+      aboutPillarsTitle: 'Our pillars:',
+      pillar1Strong: 'Professionalism:',
+      pillar1: 'Clear and efficient processes for your company.',
+      pillar2Strong: 'Closeness:',
+      pillar2: 'Personalized attention for every client and employee.',
+      pillar3Strong: 'Well-being:',
+      pillar3: 'Motivated talent and engaged teams.',
+      aboutText2:
+        "We are committed to generating real value, driving both your team's development and your company's expansion, without complications or surprises.",
+      aboutBtn: 'Schedule a consultation',
+
+      mexicoTitle: 'Expand your operations in Mexico',
+      mexicoSub: 'A location with talent, structure, and growth potential.',
+      d1Title: 'Solid labor force',
+      d1Strong: '+4 million people',
+      d1Text: 'make up the economically active population in Jalisco.',
+      d1Benefit:
+        'This means broad access to qualified talent to expand your operation without limiting your growth.',
+      d2Title: 'Structured formal employment',
+      d2Prefix: 'More than',
+      d2Strong: '2 million workers affiliated with IMSS.',
+      d2Benefit:
+        'Operations backed by a formal system that provides legal security and labor stability.',
+      d3Title: 'Diversified economy',
+      d3Intro: 'Strong presence in:',
+      d3List: ['Services', 'Commerce', 'Manufacturing industry', 'Agro-industry', 'Logistics', 'Technology'],
+      d3Benefit: 'A varied economic structure reduces risks and allows scaling with greater stability.',
+      d4Title: 'Strategic business hub',
+      d4Text: 'The Guadalajara Metropolitan Area concentrates more than',
+      d4Strong: "60% of the state's economic activity",
+      d4Benefit:
+        'Infrastructure, connectivity, and business ecosystem ready to receive foreign investment.',
+      mexicoPrep: 'At',
+      mexicoClose1:
+        'Marea we leverage these advantages so your company operates in Jalisco with legal structure, aligned talent, and a scalable model from the start.',
+      mexicoClose2: 'We help you establish with security and a growth vision.',
+
+      ventajaTitle: 'Strategic Advantage',
+      b1Title: 'Safe and frictionless operations',
+      b1Items: [
+        'Full legal compliance.',
+        'Clear structure from the start.',
+        'EOR model or consulting based on your needs.',
+        'Ongoing support.',
+      ],
+      b1Close: 'You can expand in Mexico without uncertainty.',
+      b2Title: 'Talent aligned to your culture',
+      b2Items: [
+        'Strategic recruitment.',
+        'Structured onboarding.',
+        'Continuous follow-up and evaluation.',
+        'Focus on retention and stability.',
+      ],
+      b2Close: 'Committed teams, not just quick hires.',
+      b3Title: 'Scalable growth',
+      b3Items: [
+        'Processes designed to grow with you.',
+        'Flexibility to adapt structure.',
+        'Mid and long-term vision.',
+        'Connection with local business ecosystem.',
+      ],
+      b3Close: "You don't just operate — you build a solid foundation to expand.",
+      cierre1: 'We are not just a vendor.',
+      cierre2:
+        'We are your strategic partner to establish, structure, and scale your operations in Mexico with security, clarity, and a human focus.',
+      diagBtn: 'Schedule your initial diagnosis',
+    },
+
+    nosotras: {
+      heroTitle: 'Structure, talent, and frictionless growth.',
+      heroPrep: 'At',
+      heroText1:
+        'we design solid talent structures for companies that want to grow in Mexico with clarity, compliance, and a long-term vision.',
+      heroText2: 'We integrate into your structure as a growth partner.',
+
+      b1Title: 'Structure with human purpose',
+      b1Intro: 'We design structures that ensure:',
+      b1Items: ['Measurable results', 'Positive work experience', 'Lasting work relationships'],
+      b1Close:
+        'We believe business growth is only sustainable when the human experience is too.',
+      b2Title: 'Our approach',
+      b2Intro: 'We design an integrated system that connects:',
+      b2Items: [
+        'Strategic recruitment',
+        'Structured onboarding',
+        'Administrative management',
+        'Performance tracking',
+        'Retention strategies',
+      ],
+      b2Close1: "We don't fill vacancies.",
+      b2Close2: 'We build teams that stay.',
+      b3Title: 'Intelligence and continuous improvement',
+      b3t1: 'We make decisions with real data.',
+      b3t2: 'We measure experience, detect friction, and generate actionable reports to anticipate risks.',
+      b3t3: 'Continuous improvement is not just a concept.',
+      b3t4: "It's part of our model.",
+
+      detrasTitle: 'Behind Marea',
+      detrasConnector:
+        ', founding partners, bring over 16 years of combined experience in talent management and human resources across national and international companies.',
+      d2Pre:
+        "Daniela is a psychologist with a Master's in Human Capital Management, SHRM-CP and Senior Recruiter certifications, and stands out for her",
+      d2Highlight: 'human, structured, and results-oriented approach',
+      d2Post: ', leading recruitment processes, project management, and candidate experience.',
+      d3Pre:
+        'Mariana is a psychologist certified in Internal Communication and Employee Experience, bringing a',
+      d3Highlight: 'holistic vision connecting people, processes, and business',
+      d3Post: ', focused on impact, continuous improvement, and organizational compliance.',
+      d4Pre:
+        'After years of seeing companies without clear structure and poorly integrated teams, we decided to create',
+      d4Post:
+        'to offer solutions that not only meet legal and operational standards but also generate real value for companies and talent, with professionalism, closeness, and trust.',
+
+      empresaTitle: 'The company we are',
+      empresaText:
+        'has a clear vision: we work professionally, reliably, and people-centered; building talent structures that generate real value, comply with the law, and promote solid work relationships.',
+
+      v1Title: 'Transparency',
+      v1Desc: 'Honest communication and visible processes for clients and collaborators.',
+      v2Title: 'Human focus',
+      v2Desc: 'We put talent and client at the center, building healthy and empathetic relationships.',
+      v3Title: 'Efficiency',
+      v3Desc: 'Clear processes, fast and reliable results, without sacrificing quality.',
+      v4Title: 'Innovation with purpose',
+      v4Desc: 'We improve processes and experiences, always with meaning and strategy.',
+      v5Title: 'Collaboration',
+      v5Desc: 'We build trust-based relationships with clients, talent, and partners.',
+      ctaBtn: 'Schedule a consultation',
+    },
+
+    servicios: {
+      headline: 'Services designed to operate and grow in Mexico with structure and security.',
+      subheadline:
+        'From hiring to ongoing follow-up, we manage talent so you can focus on growing your business.',
+      heroBtn: 'grow with us',
+      heroBtnHover: 'become a client',
+
+      probIntro: 'Expanding or structuring operations in Mexico can involve:',
+      probItems: [
+        'Legal risks',
+        'Hiring errors',
+        'High turnover',
+        'Complex administrative processes',
+        'Cultural misalignment',
+      ],
+      probClose:
+        'At Marea we structure the entire process so you operate with peace of mind from day one.',
+
+      fasesPrep: 'offers:',
+      f1Title: 'In-depth analysis',
+      f1Items: [
+        'Legal and operational risk map',
+        'Identification of optimization opportunities',
+        'Clear talent and structure implementation roadmap',
+        'Immediate recommendations for efficiency and growth',
+      ],
+      f2Title: 'Specialized recruitment',
+      f2Items: [
+        'Culture-aligned technical talent',
+        'Strategic filters',
+        'Reduced hiring error',
+      ],
+      f2Close: "We don't search for candidates. We search for stability for your operation.",
+      f3Title: 'Administrative structure',
+      f3Items: ['EOR model', 'Comprehensive management', 'Specialized consulting', 'Targeted support'],
+      f3Close: 'You operate in Mexico without taking on the legal complexity.',
+      f4Title: 'Integration & Retention',
+      f4Items: [
+        'Initial training',
+        'Client adaptation',
+        'Clear processes',
+        'Periodic evaluations',
+        'Strategic follow-up',
+        'Organizational culture (hybrid and on-site model)',
+      ],
+      f4Close: 'We make sure it works.',
+      ctaBtn: 'Schedule your initial diagnosis',
+    },
+  },
+}
+
+export default translations

@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "NeulisBold";
+  src: url("/fonts/Neulis-Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeulisBoldItalic";
+  src: url("/fonts/Neulis-BoldItalic.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeulisItalic";
+  src: url("/fonts/Neulis-Italic.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AltBlack";
+  src: url("/fonts/NeulisAlt-Black.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AltItalic";
+  src: url("/fonts/NeulisAlt-Italic.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AltRegular";
+  src: url("/fonts/NeulisAlt-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #f6f1ec;
+  font-family: "AltRegular", sans-serif;
+  font-size: 20px;
+  background-color: #d8b495;
+  margin: 0;
+  padding: 0;
+}
+
+body[data-theme="nosotras"] {
+  background: linear-gradient(
+    to top,
+    rgba(216, 180, 149, 0.8),
+    rgba(31, 45, 83, 0.8)
+  ) !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+body[data-theme="servicios"] {
+  background: linear-gradient(
+    to top,
+    rgba(216, 180, 149, 0.8),
+    rgb(47, 47, 47)
+  );
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #f6f1ec;
+}
+
+/* Typography utilities */
+.marea-text {
+  font-family: "NeulisBoldItalic";
+}
+
+.blackbold {
+  color: #1f2d53;
+}
+
+.mochabold {
+  color: #a57665;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* Color block utilities */
+.azul {
+  background-color: #1f2d53;
+}
+
+.mocha {
+  background-color: #a57665;
+}
+
+.negro {
+  background-color: #d8b495;
+}
+
+/* Shared buttons */
+.trabaja-button {
+  font-family: "AltRegular", sans-serif;
+  background-color: rgba(31, 45, 83, 0.8);
+  border: none;
+  color: #f6f1ec;
+  border-radius: 30px;
+  font-size: 25px;
+  padding: 10px;
+  width: 270px;
+  vertical-align: middle;
+  margin: 20px 0;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  text-align: center;
+  display: inline-block;
+}
+
+.reserva-button {
+  display: block;
+  font-family: "AltRegular", sans-serif;
+  background-color: #f6f1ec;
+  border: none;
+  color: #a57665;
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 15px 20px;
+  width: auto;
+  text-align: center;
+  margin: 50px auto 0;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.reserva-button:hover {
+  background-color: #a57665;
+  color: #f6f1ec;
+  transition: all 0.3s ease-in-out;
+}
+
+.reserva-button2 {
+  display: block;
+  font-family: "AltRegular", sans-serif;
+  background-color: #f6f1ec;
+  border: none;
+  color: #2f2f2f;
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 15px 20px;
+  width: 70%;
+  text-align: center;
+  margin: 50px auto 0;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.reserva-button2:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-servicio {
+  display: inline-block;
+  background-color: #a57665;
+  color: #1f2d53;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.cta-servicio:hover {
+  background-color: #d8b495;
+  color: #1f2d53;
+}
+
+@media (max-width: 900px) {
+  .trabaja-button {
+    font-size: 15px;
+  }
+
+  .reserva-button {
+    font-size: 25px;
+  }
+
+  .reserva-button2 {
+    font-size: 20px;
+    width: 100%;
+  }
+}
