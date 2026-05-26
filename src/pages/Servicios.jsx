@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import styles from './Servicios.module.css'
 import { useLanguage } from '../context/LanguageContext'
 import translations from '../translations'
 
@@ -9,7 +8,6 @@ export default function Servicios() {
   const { language } = useLanguage()
   const t = translations[language].servicios
   const location = useLocation()
-
   const heroBtn = btnText ?? t.heroBtn
 
   useEffect(() => {
@@ -29,94 +27,86 @@ export default function Servicios() {
   }
 
   return (
-    <>
-      <div className={styles.espacio} />
+    <div className="page-servicios">
+      <div className="espacio" />
 
-      <div className={styles.contenedorGeneral}>
-        <div className={styles.headline}>{t.headline}</div>
-        <div className={styles.subheadline}>{t.subheadline}</div>
+      <div className="contenedor-general">
+        <div className="headline">{t.headline}</div>
+        <div className="subheadline">{t.subheadline}</div>
 
         <Link
           to="/servicios#formulario"
-          className={styles.trabajaButton}
+          className="trabaja-button-svc"
           onMouseEnter={() => setBtnText(t.heroBtnHover)}
           onMouseLeave={() => setBtnText(null)}
         >
           {heroBtn}
         </Link>
 
-        <div className={styles.scrollDown} onClick={scrollToProblema}>
+        <div className="scroll-down" onClick={scrollToProblema}>
           <span className="material-symbols-outlined">keyboard_double_arrow_down</span>
         </div>
 
-        <div id="problema-section" className={styles.problemaContenedor}>
-          <div className={styles.bloqueProblema}>
-            <div className={styles.textoProblema}>
+        <div id="problema-section" className="problema-contenedor">
+          <div className="bloque-problema">
+            <div className="texto-problema">
               {t.probIntro}
               <ul>{t.probItems.map((item) => <li key={item}>{item}</li>)}</ul>
               <span className="material-symbols-outlined">diamond</span>
               <strong> {t.probClose}</strong>
             </div>
           </div>
-          <div className={styles.bloqueProblema}>
-            <img src="/media/problema.jpg" alt="problema" className={styles.problemaImg} />
+          <div className="bloque-problema">
+            <img src="/media/problema.jpg" alt="problema" className="problema-img" />
           </div>
         </div>
 
-        <div className={styles.fasesContenedor}>
-          <div className={styles.tituloGeneralFase}>
+        <div className="fases-contenedor">
+          <div className="titulo-general-fase">
             <span className="marea-text">Marea People Partners</span> {t.fasesPrep}
           </div>
-          <div className={styles.faseGrid}>
-            <div className={styles.fase}>
-              <div className={styles.tituloFase}>{t.f1Title}</div>
-              <div className={styles.contenedorFase}>
+          <div className="fase-grid">
+            <div className="fase">
+              <div className="titulo-fase">{t.f1Title}</div>
+              <div className="contenedor-fase">
                 <ul>
                   {t.f1Items.map((item) => (
-                    <li key={item}>
-                      <span className="material-symbols-outlined">done_all</span> {item}
-                    </li>
+                    <li key={item}><span className="material-symbols-outlined">done_all</span> {item}</li>
                   ))}
                 </ul>
               </div>
             </div>
 
-            <div className={styles.fase}>
-              <div className={styles.tituloFase}>{t.f2Title}</div>
-              <div className={styles.contenedorFase}>
+            <div className="fase">
+              <div className="titulo-fase">{t.f2Title}</div>
+              <div className="contenedor-fase">
                 <ul>
                   {t.f2Items.map((item) => (
-                    <li key={item}>
-                      <span className="material-symbols-outlined">done_all</span> {item}
-                    </li>
+                    <li key={item}><span className="material-symbols-outlined">done_all</span> {item}</li>
                   ))}
                 </ul>
                 {t.f2Close}
               </div>
             </div>
 
-            <div className={styles.fase}>
-              <div className={styles.tituloFase}>{t.f3Title}</div>
-              <div className={styles.contenedorFase}>
+            <div className="fase">
+              <div className="titulo-fase">{t.f3Title}</div>
+              <div className="contenedor-fase">
                 <ul>
                   {t.f3Items.map((item) => (
-                    <li key={item}>
-                      <span className="material-symbols-outlined">done_all</span> {item}
-                    </li>
+                    <li key={item}><span className="material-symbols-outlined">done_all</span> {item}</li>
                   ))}
                 </ul>
                 {t.f3Close}
               </div>
             </div>
 
-            <div className={styles.fase}>
-              <div className={styles.tituloFase}>{t.f4Title}</div>
-              <div className={styles.contenedorFase}>
+            <div className="fase">
+              <div className="titulo-fase">{t.f4Title}</div>
+              <div className="contenedor-fase">
                 <ul>
                   {t.f4Items.map((item) => (
-                    <li key={item}>
-                      <span className="material-symbols-outlined">done_all</span> {item}
-                    </li>
+                    <li key={item}><span className="material-symbols-outlined">done_all</span> {item}</li>
                   ))}
                 </ul>
                 {t.f4Close}
@@ -124,9 +114,9 @@ export default function Servicios() {
             </div>
           </div>
 
-          <Link to="/servicios#formulario" className={styles.reservaButton}>{t.ctaBtn}</Link>
+          <Link to="/servicios#formulario" className="reserva-button">{t.ctaBtn}</Link>
 
-          <div className={styles.contactoFormulario}>
+          <div className="contacto-formulario">
             <iframe
               id="formulario"
               src="https://docs.google.com/forms/d/e/1FAIpQLSdK3cxFsCLSfh1wtigkpV7DbL5HFIPk5jOJrrzMe3fGHIxMCQ/viewform?embedded=true"
@@ -142,6 +132,6 @@ export default function Servicios() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

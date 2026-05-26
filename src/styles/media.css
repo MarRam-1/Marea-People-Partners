@@ -1,0 +1,213 @@
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40%  { transform: translateY(10px); }
+  60%  { transform: translateY(6px); }
+}
+
+/* ============================================================
+   MOBILE  (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* --- Navbar ---
+     contact-bar: fixed so it's always visible on scroll.
+     top-bar (logo): fixed just below the contact-bar, overlays
+     the hero instead of pushing it down. */
+  .contact-bar {
+    position: fixed;
+    top: 0;
+    height: auto;
+    padding: 8px 15px;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  .contact-email { font-size: 11px; }
+
+  .menu-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: block;
+    z-index: auto;
+  }
+
+  .top-bar {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    z-index: 100;
+  }
+  .top-bar.scrolled,
+  .top-bar.scrolled-dark { background: none; box-shadow: none; padding: 5px 0; }
+
+  .logo,
+  .logo-scrolled { width: 150px; }
+
+  /* Slide-in menu stays fixed so it overlays the whole page */
+  .menu-container {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 220px;
+    height: 100vh;
+    background-color: rgba(31, 45, 83, 0.95);
+    transition: right 0.3s ease-in-out;
+    will-change: right;
+    z-index: 1800;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0;
+    padding: 60px 20px 20px;
+    backdrop-filter: blur(10px);
+  }
+  .menu-container.open { right: 0; }
+  .menu-card { text-align: center; color: #a57665; font-size: 18px; }
+
+  /* --- Shared buttons --- */
+  .trabaja-button { font-size: 15px; width: 230px; }
+  .reserva-button { font-size: 22px; padding: 12px 15px; }
+  .reserva-button2 { font-size: 18px; width: 100%; }
+
+  /* --- Home hero ---
+     margin-top: 32px clears the fixed contact-bar (logo overlays the hero).
+     height: calc(100vh - 32px) fills the rest of the viewport exactly. */
+  .hero {
+    margin-top: 32px;
+    height: calc(100vh - 32px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  .hero-text {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .hero-text .headline { font-size: 36px; line-height: 38px; }
+  .hero-text .subheadline { font-size: 20px; }
+
+  .hero .scroll-down {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    cursor: pointer;
+  }
+  .hero .scroll-down .material-symbols-outlined {
+    font-size: 70px;
+    color: #f6f1ec;
+    animation: bounce 1.8s infinite;
+    opacity: 0.9;
+  }
+
+  /* --- Home services grid --- */
+  .servicios-grid { grid-template-columns: 1fr; margin-top: 10px; padding: 15px; gap: 15px; }
+  .main-service .material-symbols-outlined { font-size: 90px; }
+  .title-services { font-size: 24px; }
+  .description-service { font-size: 17px; }
+
+  /* --- Home about section ---
+     Reset flex: 0 0 50% from desktop so the image div is only
+     as tall as the actual image — no phantom gap above the title. */
+  .nosotras-container { padding: 30px 15px; }
+  .nosotras-block { flex-direction: column; gap: 15px; align-items: center; }
+  .imagen-nosotras { flex: none; width: 100%; text-align: center; }
+  .nosotras-img { width: 45%; min-width: 130px; max-width: 200px; }
+  .nosotras-text { flex: none; width: 100%; max-width: 100%; }
+  .titulo-nosotras { font-size: 34px; margin-bottom: 10px; }
+  .sobre-nosotras { font-size: 16px; margin-top: 10px; }
+
+  /* --- Home mexico section --- */
+  .mexico-container { padding: 40px 15px; }
+  .titulo-mexico { font-size: 32px; }
+  .content-titulo { font-size: 20px; }
+  .mexico-block { flex-direction: column; gap: 20px; align-items: center; }
+  .jalisco-big { max-width: 380px; width: 85%; }
+  .mexico-text { max-width: 100%; width: 100%; padding: 0; }
+  .datos-jalisco { font-size: 16px; padding: 0; }
+  .dato { font-size: 20px; }
+
+  /* --- Home strategic advantage --- */
+  .diferencia-container { padding: 40px 15px; }
+  .titulo-diferencia { font-size: 32px; margin-bottom: 20px; }
+  .diferencia-grid { grid-template-columns: 1fr; gap: 15px; }
+  .bloque-diferencia { padding: 20px 15px; font-size: 17px; }
+  .diferencia { font-size: 22px; }
+  .cierre-diferencia { font-size: 17px; margin-top: 20px; }
+
+  /* --- Nosotras page --- */
+  /* espacio clears both fixed bars: contact-bar (~32px) + top-bar with logo (~50px) */
+  .espacio { height: 85px; }
+
+  .hero-nosotras { margin: 10px 15px 40px; padding: 15px; }
+  .titulo-nosotras-pagina { font-size: 38px; line-height: 42px; }
+  .contenido-estrategia { font-size: 18px; margin: 20px auto; }
+
+  .page-nosotras .scroll-down {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .nosotras-grid { grid-template-columns: 1fr; margin: 20px 15px; gap: 15px; }
+  .bloque-nosotras { padding: 20px 15px; font-size: 17px; }
+  .titulo-bloque { font-size: 22px; }
+  .contenido-bloque { font-size: 17px; }
+
+  .detras-de-contenedor { margin: 30px 15px; }
+  .titulo-detrasde { font-size: 30px; }
+  .grid-detrasde { grid-template-columns: 1fr; gap: 20px; }
+  .bloque-detras { font-size: 17px; }
+  .founders { width: 80%; max-width: 320px; margin: 0 auto; }
+
+  .empresa-contenedor { margin: 40px 15px; }
+  .titulo-empresa { font-size: 32px; }
+  .contenido-empresa { font-size: 18px; margin-bottom: 25px; }
+  .valores-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+  .titulo-valor { font-size: 20px; }
+  .desc-valor { font-size: 16px; }
+
+  /* --- Servicios page --- */
+  .contenedor-general { margin: 0 15px; }
+  .page-servicios .headline { font-size: 30px; line-height: normal; margin: 25px auto; }
+  .page-servicios .subheadline { font-size: 18px; margin: 20px auto; }
+  .trabaja-button-svc { font-size: 17px; margin: 20px auto; }
+
+  .page-servicios .scroll-down {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .page-servicios .scroll-down .material-symbols-outlined {
+    font-size: 70px;
+    color: #f6f1ec;
+    animation: bounce 1.8s infinite;
+    opacity: 0.9;
+  }
+
+  .problema-contenedor { grid-template-columns: 1fr; gap: 15px; padding: 15px; margin-top: 30px; }
+  .problema-img { width: 100%; max-width: 340px; margin: auto; }
+  .fase-grid { grid-template-columns: 1fr; gap: 15px; }
+  .titulo-general-fase { font-size: 30px; margin: 30px auto 20px; }
+  .titulo-fase { font-size: 22px; }
+  .page-servicios .reserva-button { font-size: 20px; padding: 10px 15px; margin-bottom: 40px; }
+
+  .contacto-formulario { overflow: hidden; }
+  .contacto-formulario iframe { width: 100% !important; min-width: unset; }
+}

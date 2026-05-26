@@ -1,5 +1,3 @@
-import styles from './Footer.module.css'
-
 export default function Footer() {
-  return <footer className={styles.footer}>Coded by Mariana Ramirez</footer>
+  return <footer className="footer">Coded by Mariana Ramirez</footer>
 }
