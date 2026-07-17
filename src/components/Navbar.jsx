@@ -51,7 +51,16 @@ export default function Navbar({ variant = 'default' }) {
       <header className={topBarClass}>
         <div className="hero-logo">
           <Link to="/">
-            <img src="/media/M.png" alt="MareaLogo" className={scrolled ? 'logo-scrolled' : 'logo'} />
+            <img
+              src="/media/M.png"
+              alt="MareaLogo"
+              className={`logo-light ${scrolled ? 'logo-scrolled' : 'logo'}`}
+            />
+            <img
+              src="/media/M-azul.png"
+              alt="MareaLogo"
+              className={`logo-dark ${scrolled ? 'logo-scrolled' : 'logo'}`}
+            />
           </Link>
         </div>
         <nav
