@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from '../components/Footer'
+import Wave from '../components/Wave'
+import useReveal from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 import translations from '../translations'
 
@@ -9,13 +10,14 @@ export default function Home() {
   const { language } = useLanguage()
   const t = translations[language].home
   const heroBtn = btnText ?? t.heroBtn
+  const reveal = useReveal([language])
 
   const scrollToServices = () => {
     document.getElementById('servicios-section').scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <>
+    <div ref={reveal}>
       {/* Hero */}
       <div className="hero">
         <video autoPlay muted loop className="bg-video">
@@ -42,10 +44,11 @@ export default function Home() {
           <span className="material-symbols-outlined">keyboard_double_arrow_down</span>
         </div>
       </div>
+      <Wave fill="#f6f1ec" />
 
       {/* Services Grid */}
       <div id="servicios-section" className="servicios-grid">
-        <div className="servicio">
+        <div className="servicio reveal">
           <div className="main-service">
             <span className="material-symbols-outlined">how_to_reg</span>
           </div>
@@ -60,7 +63,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="servicio">
+        <div className="servicio reveal">
           <div className="main-service">
             <span className="material-symbols-outlined">cast_for_education</span>
           </div>
@@ -75,7 +78,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="servicio">
+        <div className="servicio reveal">
           <div className="main-service">
             <span className="material-symbols-outlined">shield_with_heart</span>
           </div>
@@ -91,13 +94,15 @@ export default function Home() {
         </div>
       </div>
 
+      <Wave fill="#1f2d53" />
+
       {/* About Marea */}
       <div className="nosotras-container">
         <div className="nosotras-block">
-          <div className="imagen-nosotras">
-            <img src="/media/pexels-cottonbro-6532337.jpg" alt="nosotras" className="nosotras-img" />
+          <div className="imagen-nosotras reveal">
+            <img src="/media/pexels-cottonbro-6532337.png" alt="Equipo de Marea People Partners" className="nosotras-img" />
           </div>
-          <div className="nosotras-text">
+          <div className="nosotras-text reveal">
             <div className="titulo-nosotras">{t.aboutTitle}</div>
             <div className="sobre-nosotras">
               <p>
@@ -116,14 +121,16 @@ export default function Home() {
         </div>
       </div>
 
+      <Wave fill="#f6f1ec" flip />
+
       {/* Mexico Section */}
       <div className="mexico-container">
-        <div className="titulo-mexico">
+        <div className="titulo-mexico reveal">
           <div>{t.mexicoTitle}</div>
           <div className="content-titulo">{t.mexicoSub}</div>
         </div>
         <div className="mexico-block">
-          <div className="mexico-text">
+          <div className="mexico-text reveal">
             <div className="datos-jalisco">
               <div className="dato">
                 <span className="material-symbols-outlined">enterprise</span> {t.d1Title}
@@ -159,31 +166,33 @@ export default function Home() {
             <span className="material-symbols-outlined mochabold">thumb_up</span>{' '}
             <span className="mochabold"><strong>{t.mexicoClose2}</strong></span>
           </div>
-          <div>
+          <div className="reveal">
             <img src="/media/Jalisco.jpg" alt="Jalisco" className="jalisco-big" />
           </div>
         </div>
       </div>
 
+      <Wave fill="#1f2d53" />
+
       {/* Strategic Advantage */}
       <div className="diferencia-container">
-        <div className="titulo-diferencia">{t.ventajaTitle}</div>
+        <div className="titulo-diferencia reveal">{t.ventajaTitle}</div>
         <div className="diferencia-grid">
-          <div className="bloque-diferencia azul">
+          <div className="bloque-diferencia azul reveal">
             <div className="diferencia">{t.b1Title}</div>
             <div className="diferencia-contenido">
               <ul>{t.b1Items.map((item) => <li key={item}>{item}</li>)}</ul>
               <span className="material-symbols-outlined">diamond</span> {t.b1Close}
             </div>
           </div>
-          <div className="bloque-diferencia mocha">
+          <div className="bloque-diferencia mocha reveal">
             <div className="diferencia">{t.b2Title}</div>
             <div className="diferencia-contenido">
               <ul>{t.b2Items.map((item) => <li key={item}>{item}</li>)}</ul>
               <span className="material-symbols-outlined">diamond</span> {t.b2Close}
             </div>
           </div>
-          <div className="bloque-diferencia negro">
+          <div className="bloque-diferencia negro reveal">
             <div className="diferencia">{t.b3Title}</div>
             <div className="diferencia-contenido">
               <ul>{t.b3Items.map((item) => <li key={item}>{item}</li>)}</ul>
@@ -196,8 +205,6 @@ export default function Home() {
         </div>
         <Link to="/servicios#formulario" className="reserva-button2">{t.diagBtn}</Link>
       </div>
-
-      <Footer />
-    </>
+    </div>
   )
 }

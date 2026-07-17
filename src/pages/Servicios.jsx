@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import translations from '../translations'
+import Wave from '../components/Wave'
+import ContactForm from '../components/ContactForm'
+import useReveal from '../hooks/useReveal'
 
 export default function Servicios() {
   const [btnText, setBtnText] = useState(null)
@@ -9,6 +12,7 @@ export default function Servicios() {
   const t = translations[language].servicios
   const location = useLocation()
   const heroBtn = btnText ?? t.heroBtn
+  const reveal = useReveal([language])
 
   useEffect(() => {
     document.body.setAttribute('data-theme', 'servicios')
@@ -27,10 +31,8 @@ export default function Servicios() {
   }
 
   return (
-    <div className="page-servicios">
-      <div className="espacio" />
-
-      <div className="contenedor-general">
+    <div className="page-servicios" ref={reveal}>
+      <div className="servicios-hero">
         <div className="headline">{t.headline}</div>
         <div className="subheadline">{t.subheadline}</div>
 
@@ -46,8 +48,11 @@ export default function Servicios() {
         <div className="scroll-down" onClick={scrollToProblema}>
           <span className="material-symbols-outlined">keyboard_double_arrow_down</span>
         </div>
+      </div>
+      <Wave fill="#f6f1ec" flip />
 
-        <div id="problema-section" className="problema-contenedor">
+      <div className="contenedor-general">
+        <div id="problema-section" className="problema-contenedor reveal">
           <div className="bloque-problema">
             <div className="texto-problema">
               {t.probIntro}
@@ -57,16 +62,16 @@ export default function Servicios() {
             </div>
           </div>
           <div className="bloque-problema">
-            <img src="/media/problema.jpg" alt="problema" className="problema-img" />
+            <img src="/media/problema.jpg" alt="Equipo trabajando en la estructuración de operación en México" className="problema-img" />
           </div>
         </div>
 
         <div className="fases-contenedor">
-          <div className="titulo-general-fase">
+          <div className="titulo-general-fase reveal">
             <span className="marea-text">Marea People Partners</span> {t.fasesPrep}
           </div>
           <div className="fase-grid">
-            <div className="fase">
+            <div className="fase reveal">
               <div className="titulo-fase">{t.f1Title}</div>
               <div className="contenedor-fase">
                 <ul>
@@ -77,7 +82,7 @@ export default function Servicios() {
               </div>
             </div>
 
-            <div className="fase">
+            <div className="fase reveal">
               <div className="titulo-fase">{t.f2Title}</div>
               <div className="contenedor-fase">
                 <ul>
@@ -89,7 +94,7 @@ export default function Servicios() {
               </div>
             </div>
 
-            <div className="fase">
+            <div className="fase reveal">
               <div className="titulo-fase">{t.f3Title}</div>
               <div className="contenedor-fase">
                 <ul>
@@ -101,7 +106,7 @@ export default function Servicios() {
               </div>
             </div>
 
-            <div className="fase">
+            <div className="fase reveal">
               <div className="titulo-fase">{t.f4Title}</div>
               <div className="contenedor-fase">
                 <ul>
@@ -114,21 +119,10 @@ export default function Servicios() {
             </div>
           </div>
 
-          <Link to="/servicios#formulario" className="reserva-button">{t.ctaBtn}</Link>
+          <Link to="/servicios#formulario" className="btn-primary btn-primary--centered">{t.ctaBtn}</Link>
 
-          <div className="contacto-formulario">
-            <iframe
-              id="formulario"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdK3cxFsCLSfh1wtigkpV7DbL5HFIPk5jOJrrzMe3fGHIxMCQ/viewform?embedded=true"
-              width="640"
-              height="800"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-              title="Formulario de contacto"
-            >
-              Cargando…
-            </iframe>
+          <div className="reveal">
+            <ContactForm />
           </div>
         </div>
       </div>

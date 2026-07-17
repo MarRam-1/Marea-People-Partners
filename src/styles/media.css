@@ -9,6 +9,12 @@
    ============================================================ */
 @media (max-width: 768px) {
 
+  /* --- Waves --- */
+  .wave svg { height: 70px; }
+
+  /* --- Buttons --- */
+  .btn-primary { font-size: 18px; padding: 12px 22px; }
+
   /* --- Navbar ---
      contact-bar: fixed so it's always visible on scroll.
      top-bar (logo): fixed just below the contact-bar, overlays
@@ -115,14 +121,15 @@
 
   /* --- Home services grid --- */
   .servicios-grid { grid-template-columns: 1fr; margin-top: 10px; padding: 15px; gap: 15px; }
-  .main-service .material-symbols-outlined { font-size: 90px; }
+  .main-service { width: 100px; height: 100px; }
+  .main-service .material-symbols-outlined { font-size: 48px; }
   .title-services { font-size: 24px; }
   .description-service { font-size: 17px; }
 
   /* --- Home about section ---
      Reset flex: 0 0 50% from desktop so the image div is only
      as tall as the actual image — no phantom gap above the title. */
-  .nosotras-container { padding: 30px 15px; }
+  .nosotras-container { padding: 40px 24px; }
   .nosotras-block { flex-direction: column; gap: 15px; align-items: center; }
   .imagen-nosotras { flex: none; width: 100%; text-align: center; }
   .nosotras-img { width: 45%; min-width: 130px; max-width: 200px; }
@@ -131,7 +138,7 @@
   .sobre-nosotras { font-size: 16px; margin-top: 10px; }
 
   /* --- Home mexico section --- */
-  .mexico-container { padding: 40px 15px; }
+  .mexico-container { padding: 40px 24px; }
   .titulo-mexico { font-size: 32px; }
   .content-titulo { font-size: 20px; }
   .mexico-block { flex-direction: column; gap: 20px; align-items: center; }
@@ -141,7 +148,7 @@
   .dato { font-size: 20px; }
 
   /* --- Home strategic advantage --- */
-  .diferencia-container { padding: 40px 15px; }
+  .diferencia-container { padding: 40px 24px; }
   .titulo-diferencia { font-size: 32px; margin-bottom: 20px; }
   .diferencia-grid { grid-template-columns: 1fr; gap: 15px; }
   .bloque-diferencia { padding: 20px 15px; font-size: 17px; }
@@ -157,13 +164,21 @@
     position: relative;
     top: auto;
     margin-top: 32px;
+    padding-top: 20px;
   }
 
-  /* espacio only needs to clear the small gap after the in-flow top-bar */
-  .espacio { height: 85px; }
-  body[data-theme="nosotras"] .espacio,
-  body[data-theme="servicios"] .espacio { height: 10px; }
+  /* Logo bar sits in-flow on the crema page background here (before the
+     gradient hero), so the light/cream logo becomes invisible — swap it. */
+  body[data-theme="nosotras"] .logo-light,
+  body[data-theme="servicios"] .logo-light {
+    display: none;
+  }
+  body[data-theme="nosotras"] .logo-dark,
+  body[data-theme="servicios"] .logo-dark {
+    display: block;
+  }
 
+  .hero-nosotras-wrap { padding: 10px 0 5px; }
   .hero-nosotras { margin: 10px 15px 40px; padding: 15px; }
   .titulo-nosotras-pagina { font-size: 38px; line-height: 42px; }
   .contenido-estrategia { font-size: 18px; margin: 20px auto; }
@@ -195,6 +210,7 @@
 
   /* --- Servicios page --- */
   .contenedor-general { margin: 0 15px; }
+  .servicios-hero { padding: 10px 15px 5px; }
   .page-servicios .headline { font-size: 30px; line-height: normal; margin: 25px auto; }
   .page-servicios .subheadline { font-size: 18px; margin: 20px auto; }
   .trabaja-button-svc { font-size: 17px; margin: 20px auto; }
@@ -218,8 +234,19 @@
   .fase-grid { grid-template-columns: 1fr; gap: 15px; }
   .titulo-general-fase { font-size: 30px; margin: 30px auto 20px; }
   .titulo-fase { font-size: 22px; }
-  .page-servicios .reserva-button { font-size: 20px; padding: 10px 15px; margin-bottom: 40px; }
+  .page-servicios .reserva-button,
+  .page-servicios .btn-primary { font-size: 20px; padding: 12px 18px; margin-bottom: 40px; }
 
-  .contacto-formulario { overflow: hidden; }
-  .contacto-formulario iframe { width: 100% !important; min-width: unset; }
+  .contact-form { padding: 25px 20px; margin: 0 auto 40px; }
+  .contact-form-title { font-size: 22px; }
+
+  /* --- Footer --- */
+  .site-footer { padding: 40px 20px 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  .footer-col { align-items: center; }
+  .footer-contact span { text-align: center; }
+  .back-to-top { right: 20px; top: -20px; width: 40px; height: 40px; }
+
+  /* --- Nosotras: valores grid as 2 / 1 (full-width) / 2 --- */
+  .valores-grid .valor:nth-child(3) { grid-column: 1 / -1; }
 }
